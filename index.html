@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JJRR — Premium Roofing &amp; Home Services · Central Florida</title>
+  <meta name="description" content="JJRR by Jorge Rivera — premium roof maintenance, home improvement and quality repairs in Kissimmee, Orlando, Davenport, Poinciana, Apopka and more across Central Florida. Call 407-922-0033 for a free estimate." />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RoofingContractor",
+    "name": "JJRR",
+    "alternateName": "JJRR by Jorge Rivera",
+    "founder": { "@type": "Person", "name": "Jorge Rivera" },
+    "telephone": "+14079220033",
+    "description": "Premium roof maintenance, home improvement and quality repairs across Central Florida",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kissimmee",
+      "addressRegion": "FL",
+      "addressCountry": "US"
+    },
+    "areaServed": ["Kissimmee","Orlando","Davenport","Poinciana","Apopka","St. Cloud","Celebration","Lakeland","Winter Garden","Clermont","Polk County","Central Florida"],
+    "openingHours": "Mo-Sa 07:00-19:00",
+    "priceRange": "$$",
+    "sameAs": ["https://wa.me/14079220033"]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500;600;700;800;900&family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <noscript><style>.reveal{opacity:1 !important;transform:none !important;}</style></noscript>
+</head>
+<body class="lang-en">
+
+  <!-- ===== ANNOUNCEMENT ===== -->
+  <div id="announce" role="banner">
+    <span data-en>Free estimates · No obligation</span>
+    <span data-es>Estimados gratuitos · Sin compromiso</span>
+    <span class="dot" aria-hidden="true">&#9670;</span>
+    <a href="tel:4079220033"><strong>407-922-0033</strong></a>
+  </div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar" aria-label="Main navigation">
+    <a class="brand" href="#hero" aria-label="JJRR Home">
+      <div class="brand-mark" aria-hidden="true"><span>JJRR</span></div>
+      <div class="brand-text">
+        <span class="brand-name"><span class="j" aria-hidden="true">J</span>JRR</span>
+        <span class="brand-sub">by Jorge Rivera</span>
+      </div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#services" data-en>Services</a><a href="#services" data-es>Servicios</a></li>
+      <li><a href="#videos" data-en>Our Work</a><a href="#videos" data-es>Trabajo</a></li>
+      <li><a href="#portfolio" data-en>Portfolio</a><a href="#portfolio" data-es>Portafolio</a></li>
+      <li><a href="#coverage" data-en>Coverage</a><a href="#coverage" data-es>Cobertura</a></li>
+      <li><a href="#contact" data-en>Contact</a><a href="#contact" data-es>Contacto</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="lang-btn" id="langToggle" onclick="toggleLang()" aria-label="Switch language">ES</button>
+      <button class="burger" id="burger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== MOBILE MENU ===== -->
+  <div id="mobile-menu" role="navigation" aria-label="Mobile navigation">
+    <a href="#services" onclick="closeMobile()" data-en>Services</a>
+    <a href="#services" onclick="closeMobile()" data-es>Servicios</a>
+    <a href="#videos" onclick="closeMobile()" data-en>Our Work</a>
+    <a href="#videos" onclick="closeMobile()" data-es>Trabajo</a>
+    <a href="#portfolio" onclick="closeMobile()" data-en>Portfolio</a>
+    <a href="#portfolio" onclick="closeMobile()" data-es>Portafolio</a>
+    <a href="#coverage" onclick="closeMobile()" data-en>Coverage</a>
+    <a href="#coverage" onclick="closeMobile()" data-es>Cobertura</a>
+    <a href="#contact" onclick="closeMobile()" data-en>Contact</a>
+    <a href="#contact" onclick="closeMobile()" data-es>Contacto</a>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" aria-label="Hero">
+    <div class="hero-bg">
+      <picture>
+        <source media="(max-width: 768px)" srcset="mobil.webp" type="image/webp" />
+        <source media="(max-width: 768px)" srcset="mobil.jpg" />
+        <source srcset="fondo.webp" type="image/webp" />
+        <img src="fondo.jpg" alt="JJRR — Premium Roofing &amp; Home Services in Central Florida" fetchpriority="high" />
+      </picture>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow reveal">
+        <span data-en>Central Florida · Professional Service</span>
+        <span data-es>Centro de Florida · Servicio Profesional</span>
+      </div>
+
+      <h1 class="hero-wordmark reveal"><span class="j" aria-hidden="true">J</span>JRR</h1>
+
+      <div class="hero-divider reveal"><span></span></div>
+
+      <p class="hero-positioning reveal">
+        <span data-en>Roof <em class="accent">Maintenance</em>, Home <em class="accent">Improvement</em>, Quality Repairs</span>
+        <span data-es><em class="accent">Mantenimiento</em> de Techo, <em class="accent">Mejoras</em> del Hogar, Reparaciones de Calidad</span>
+      </p>
+
+      <div class="hero-services-row reveal">
+        <span data-en>Roof Maintenance</span><span data-es>Mantenimiento</span>
+        <span data-en>Home Improvement</span><span data-es>Mejoras del Hogar</span>
+        <span data-en>Leak Repair</span><span data-es>Reparaciones</span>
+        <span data-en>Storm Repair</span><span data-es>Tormentas</span>
+      </div>
+
+      <p class="hero-tagline reveal">
+        <span data-en>Premium craftsmanship for Central Florida homeowners.</span>
+        <span data-es>Artesanía premium para propietarios del Centro de Florida.</span>
+      </p>
+
+      <div class="hero-btns reveal">
+        <a href="#contact" class="btn-gold">
+          <span data-en>Request Estimate</span>
+          <span data-es>Pedir Estimado</span>
+          <i class="fas fa-arrow-right" aria-hidden="true"></i>
+        </a>
+        <a href="tel:4079220033" class="btn-ghost">
+          <i class="fas fa-phone" aria-hidden="true"></i>
+          <span>407-922-0033</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-cities-mini" aria-label="Service cities">
+      <span>Kissimmee</span><span class="dot" aria-hidden="true">&#9670;</span>
+      <span>Orlando</span><span class="dot" aria-hidden="true">&#9670;</span>
+      <span>Davenport</span><span class="dot" aria-hidden="true">&#9670;</span>
+      <span>Poinciana</span><span class="dot" aria-hidden="true">&#9670;</span>
+      <span>Apopka</span><span class="dot" aria-hidden="true">&#9670;</span>
+      <span data-en>And More</span><span data-es>Y Más</span>
+    </div>
+  </section>
+
+  <!-- ===== TRUST STRIP ===== -->
+  <div id="trust" aria-label="Service highlights">
+    <div class="trust-grid">
+      <div class="trust-item reveal">
+        <div class="trust-num">&#9670;</div>
+        <div class="trust-label" data-en>Premium Craftsmanship</div>
+        <div class="trust-label" data-es>Artesanía Premium</div>
+      </div>
+      <div class="trust-item reveal">
+        <div class="trust-num">&#9670;</div>
+        <div class="trust-label" data-en>Quality Work</div>
+        <div class="trust-label" data-es>Trabajo de Calidad</div>
+      </div>
+      <div class="trust-item reveal">
+        <div class="trust-num">&#9670;</div>
+        <div class="trust-label" data-en>Reliable Service</div>
+        <div class="trust-label" data-es>Servicio Confiable</div>
+      </div>
+      <div class="trust-item reveal">
+        <div class="trust-num">&#9670;</div>
+        <div class="trust-label" data-en>Free Estimates</div>
+        <div class="trust-label" data-es>Estimados Gratis</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== ABOUT / PROFESSIONAL SERVICES ===== -->
+  <section id="about" aria-label="About JJRR">
+    <div class="about-inner">
+      <div class="about-visual reveal">
+        <div class="about-img-frame">
+          <picture>
+            <source srcset="assets/roofing-work-02.webp" type="image/webp" />
+            <img src="assets/roofing-work-02.jpg" alt="JJRR — Professional roofing and home improvement services" loading="lazy" width="600" height="580" />
+          </picture>
+        </div>
+        <div class="about-signature">
+          <div class="sig-name">JORGE RIVERA</div>
+          <div class="sig-title" data-en>Lead Contractor</div>
+          <div class="sig-title" data-es>Contratista Principal</div>
+        </div>
+      </div>
+
+      <div class="about-content reveal">
+        <div class="section-eyebrow">
+          <span data-en>Why Choose JJRR</span>
+          <span data-es>Por Qué Elegir JJRR</span>
+        </div>
+
+        <h2 class="section-title">
+          <span data-en>Professional <em>service</em>,<br>proven <em>results</em>.</span>
+          <span data-es>Servicio <em>profesional</em>,<br>resultados <em>comprobados</em>.</span>
+        </h2>
+
+        <p class="about-text" data-en>
+          JJRR delivers premium roof maintenance, home improvement, and quality repairs for homeowners across Central Florida. Every project is built on reliability, honest estimates, and meticulous attention to detail — from scheduled roof inspections to complete home renovations.
+        </p>
+
+        <p class="about-text" data-es>
+          JJRR ofrece mantenimiento premium de techos, mejoras del hogar y reparaciones de calidad para propietarios en todo el Centro de Florida. Cada proyecto se basa en confiabilidad, estimados honestos y atención meticulosa a los detalles — desde inspecciones programadas hasta renovaciones completas del hogar.
+        </p>
+
+        <ul class="about-values">
+          <li>
+            <i class="fas fa-circle-check" aria-hidden="true"></i>
+            <div>
+              <strong data-en>Quality Workmanship</strong><strong data-es>Trabajo de Calidad</strong>
+              <span class="value-sub" data-en>Premium materials and finishes</span>
+              <span class="value-sub" data-es>Materiales y acabados premium</span>
+            </div>
+          </li>
+          <li>
+            <i class="fas fa-circle-check" aria-hidden="true"></i>
+            <div>
+              <strong data-en>Free Estimates</strong><strong data-es>Estimados Gratuitos</strong>
+              <span class="value-sub" data-en>No obligation, clear pricing</span>
+              <span class="value-sub" data-es>Sin compromiso, precios claros</span>
+            </div>
+          </li>
+          <li>
+            <i class="fas fa-circle-check" aria-hidden="true"></i>
+            <div>
+              <strong data-en>Bilingual Service</strong><strong data-es>Servicio Bilingüe</strong>
+              <span class="value-sub" data-en>English &amp; Spanish</span>
+              <span class="value-sub" data-es>Inglés y Español</span>
+            </div>
+          </li>
+          <li>
+            <i class="fas fa-circle-check" aria-hidden="true"></i>
+            <div>
+              <strong data-en>Florida Coverage</strong><strong data-es>Cobertura en Florida</strong>
+              <span class="value-sub" data-en>Serving most areas across Florida</span>
+              <span class="value-sub" data-es>Sirviendo la mayor parte de Florida</span>
+            </div>
+          </li>
+        </ul>
+
+        <a href="tel:4079220033" class="btn-gold">
+          <i class="fas fa-phone" aria-hidden="true"></i> 407-922-0033
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services" aria-label="Services">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">
+        <span data-en>What We Do</span>
+        <span data-es>Lo Que Hacemos</span>
+      </div>
+      <h2 class="section-title">
+        <span data-en>Built around <em>maintenance</em><br>and craftsmanship.</span>
+        <span data-es>Hecho alrededor del <em>mantenimiento</em><br>y la artesanía.</span>
+      </h2>
+      <p class="section-lede">
+        <span data-en>From scheduled roof inspections to full home improvement — we work the long game, not the quick fix.</span>
+        <span data-es>Desde inspecciones programadas hasta mejoras completas del hogar — trabajamos a largo plazo, no soluciones rápidas.</span>
+      </p>
+    </div>
+
+    <div class="services-featured reveal">
+      <div class="feat-icon" aria-hidden="true"><i class="fas fa-house-chimney-medical"></i></div>
+      <div class="feat-body">
+        <h3 data-en>Roof Maintenance &amp; Home Improvement</h3>
+        <h3 data-es>Mantenimiento de Techo y Mejoras del Hogar</h3>
+        <p data-en>Our signature service. Scheduled inspections, preventive maintenance, and thoughtful improvements that extend the life of your home and avoid expensive repairs down the line.</p>
+        <p data-es>Nuestro servicio insignia. Inspecciones programadas, mantenimiento preventivo y mejoras pensadas que extienden la vida de su hogar y evitan reparaciones costosas a futuro.</p>
+        <div class="feat-tags">
+          <span class="tag" data-en>Annual Inspections</span><span class="tag" data-es>Inspecciones Anuales</span>
+          <span class="tag" data-en>Preventive Care</span><span class="tag" data-es>Cuidado Preventivo</span>
+          <span class="tag" data-en>Home Upgrades</span><span class="tag" data-es>Mejoras del Hogar</span>
+        </div>
+      </div>
+      <a href="#contact" class="btn-gold feat-btn">
+        <span data-en>Schedule</span><span data-es>Agendar</span>
+        <i class="fas fa-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+
+    <div class="services-grid">
+      <div class="svc-card reveal">
+        <div class="svc-icon" aria-hidden="true"><i class="fas fa-droplet"></i></div>
+        <h3 data-en>Leak Repair</h3>
+        <h3 data-es>Reparación de Goteras</h3>
+        <p data-en>Precise diagnosis and permanent waterproof solutions for any type of leak or water infiltration.</p>
+        <p data-es>Diagnóstico preciso y soluciones impermeables permanentes para cualquier filtración o gotera.</p>
+        <div class="svc-tags">
+          <span class="tag" data-en>Waterproofing</span><span class="tag" data-es>Impermeabilización</span>
+        </div>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-icon" aria-hidden="true"><i class="fas fa-layer-group"></i></div>
+        <h3 data-en>Shingle Replacement</h3>
+        <h3 data-es>Reemplazo de Tejas</h3>
+        <p data-en>Full or partial shingle replacement with premium materials, restoring look and protection.</p>
+        <p data-es>Reemplazo total o parcial de tejas con materiales premium — restaurando estética y protección.</p>
+        <div class="svc-tags">
+          <span class="tag" data-en>Architectural</span><span class="tag" data-es>Arquitectónica</span>
+        </div>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-icon" aria-hidden="true"><i class="fas fa-square"></i></div>
+        <h3 data-en>Flat &amp; Metal Roofs</h3>
+        <h3 data-es>Techos Planos y Metálicos</h3>
+        <p data-en>Specialized installation and repair of flat and metal roofing systems built for Florida's climate.</p>
+        <p data-es>Instalación y reparación especializada de techos planos y metálicos, hechos para el clima de Florida.</p>
+        <div class="svc-tags">
+          <span class="tag" data-en>Flat Roof</span><span class="tag" data-es>Techo Plano</span>
+          <span class="tag" data-en>Metal</span><span class="tag" data-es>Metálico</span>
+        </div>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-icon" aria-hidden="true"><i class="fas fa-paint-roller"></i></div>
+        <h3 data-en>Drywall &amp; Painting</h3>
+        <h3 data-es>Drywall y Pintura</h3>
+        <p data-en>Interior and exterior drywall repair, texturing, and professional painting — clean lines, clean finish.</p>
+        <p data-es>Reparación de drywall interior y exterior, texturizado y pintura profesional — líneas limpias, acabado limpio.</p>
+        <div class="svc-tags">
+          <span class="tag">Drywall</span>
+          <span class="tag" data-en>Painting</span><span class="tag" data-es>Pintura</span>
+        </div>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-icon" aria-hidden="true"><i class="fas fa-hammer"></i></div>
+        <h3 data-en>Carpentry &amp; Repairs</h3>
+        <h3 data-es>Carpintería y Reparaciones</h3>
+        <p data-en>Door frames, decks, trim, fences, and custom wood work. General handyman done right.</p>
+        <p data-es>Marcos de puertas, decks, molduras, cercas y trabajo en madera. Reparaciones generales bien hechas.</p>
+        <div class="svc-tags">
+          <span class="tag" data-en>Carpentry</span><span class="tag" data-es>Carpintería</span>
+        </div>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-icon" aria-hidden="true"><i class="fas fa-faucet-drip"></i></div>
+        <h3 data-en>Basic Plumbing</h3>
+        <h3 data-es>Plomería Básica</h3>
+        <p data-en>Faucet repairs, pipe leaks, drain clearing, and fixture replacements. Reliable and fast.</p>
+        <p data-es>Reparación de grifos, fugas, limpieza de desagües y reemplazo de accesorios. Confiable y rápido.</p>
+        <div class="svc-tags">
+          <span class="tag" data-en>Leaks</span><span class="tag" data-es>Fugas</span>
+          <span class="tag" data-en>Fixtures</span><span class="tag" data-es>Accesorios</span>
+        </div>
+      </div>
+
+      <div class="svc-card reveal">
+        <div class="svc-icon" aria-hidden="true"><i class="fas fa-cloud-bolt"></i></div>
+        <h3 data-en>Storm &amp; Weather Repair</h3>
+        <h3 data-es>Reparación por Tormenta</h3>
+        <p data-en>When Florida weather hits, we are available for storm damage repair too. Just give us a call.</p>
+        <p data-es>Cuando el clima de Florida golpea, también atendemos reparaciones por tormenta. Solo llámenos.</p>
+        <div class="svc-tags">
+          <span class="tag" data-en>Available</span><span class="tag" data-es>Disponible</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESS ===== -->
+  <section id="process" aria-label="Our process">
+    <div class="process-inner">
+      <div class="process-header reveal">
+        <div>
+          <div class="section-eyebrow">
+            <span data-en>The Practice</span>
+            <span data-es>La Práctica</span>
+          </div>
+          <h2 class="section-title">
+            <span data-en>Four steps.<br>One <em>standard</em>.</span>
+            <span data-es>Cuatro pasos.<br>Un <em>estándar</em>.</span>
+          </h2>
+        </div>
+        <p class="process-lede">
+          <span data-en>Every JJRR project follows the same disciplined path — from the first inspection to long-term maintenance. No shortcuts, no surprises.</span>
+          <span data-es>Cada proyecto de JJRR sigue el mismo camino disciplinado — desde la primera inspección hasta el mantenimiento a largo plazo. Sin atajos, sin sorpresas.</span>
+        </p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-step reveal">
+          <span class="process-num" aria-hidden="true">01</span>
+          <h3 data-en>Inspect</h3>
+          <h3 data-es>Inspeccionar</h3>
+          <p data-en>A careful walkthrough — every detail noted, photographed, explained in plain language.</p>
+          <p data-es>Una inspección cuidadosa — cada detalle anotado, fotografiado y explicado claramente.</p>
+        </div>
+        <div class="process-step reveal">
+          <span class="process-num" aria-hidden="true">02</span>
+          <h3 data-en>Plan</h3>
+          <h3 data-es>Planear</h3>
+          <p data-en>An honest written estimate. Clear scope, clear timeline, clear cost — no surprises.</p>
+          <p data-es>Un estimado honesto y por escrito. Alcance, tiempo y costo claros — sin sorpresas.</p>
+        </div>
+        <div class="process-step reveal">
+          <span class="process-num" aria-hidden="true">03</span>
+          <h3 data-en>Craft</h3>
+          <h3 data-es>Construir</h3>
+          <p data-en>Quality materials, careful execution, daily updates. Finished only when it is right.</p>
+          <p data-es>Materiales de calidad, ejecución cuidadosa, actualizaciones diarias. Terminado solo cuando esté bien.</p>
+        </div>
+        <div class="process-step reveal">
+          <span class="process-num" aria-hidden="true">04</span>
+          <h3 data-en>Maintain</h3>
+          <h3 data-es>Mantener</h3>
+          <p data-en>Optional scheduled check-ins to keep your home protected for the long run.</p>
+          <p data-es>Visitas programadas opcionales para mantener su hogar protegido a largo plazo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VIDEO GALLERY ===== -->
+  <section id="videos" aria-label="Video gallery">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">
+        <span data-en>Our Work In Frame</span>
+        <span data-es>Nuestro Trabajo en Cuadro</span>
+      </div>
+      <h2 class="section-title">
+        <span data-en>The <em>craft</em>, on film.</span>
+        <span data-es>El <em>oficio</em>, en video.</span>
+      </h2>
+      <p class="section-lede">
+        <span data-en>Real footage from real job sites — no filters, no stock. Click to play.</span>
+        <span data-es>Videos reales de trabajos reales — sin filtros, sin stock. Haga clic para reproducir.</span>
+      </p>
+    </div>
+
+    <div class="video-grid reveal">
+      <div class="video-wrap" id="wrap1">
+        <video muted playsinline preload="metadata" id="vid1" aria-label="Roof installation in progress">
+          <source src="assets/roofing-video-01.mp4" type="video/mp4" />
+        </video>
+        <div class="video-overlay" onclick="toggleVideo('vid1','wrap1')" role="button" tabindex="0" aria-label="Play video" onkeydown="if(event.key==='Enter'||event.key===' ')toggleVideo('vid1','wrap1')">
+          <div class="play-circle"><i class="fas fa-play" id="icon1"></i></div>
+        </div>
+        <div class="video-label">
+          <h4 data-en>Roof Installation in Progress</h4>
+          <h4 data-es>Instalación de Techo en Curso</h4>
+          <span data-en>Central Florida · Real Site</span>
+          <span data-es>Centro de Florida · Trabajo Real</span>
+        </div>
+      </div>
+
+      <div class="video-wrap" id="wrap2">
+        <video muted playsinline preload="metadata" id="vid2" aria-label="Repair and restoration work">
+          <source src="assets/roofing-video-02.mp4" type="video/mp4" />
+        </video>
+        <div class="video-overlay" onclick="toggleVideo('vid2','wrap2')" role="button" tabindex="0" aria-label="Play video" onkeydown="if(event.key==='Enter'||event.key===' ')toggleVideo('vid2','wrap2')">
+          <div class="play-circle"><i class="fas fa-play" id="icon2"></i></div>
+        </div>
+        <div class="video-label">
+          <h4 data-en>Repair &amp; Restoration</h4>
+          <h4 data-es>Reparación y Restauración</h4>
+          <span data-en>Kissimmee · Completed</span>
+          <span data-es>Kissimmee · Completado</span>
+        </div>
+      </div>
+    </div>
+
+    <p class="video-muted-note reveal">
+      <i class="fas fa-volume-xmark" aria-hidden="true"></i>
+      <span data-en>Videos play without sound</span>
+      <span data-es>Los videos se reproducen sin sonido</span>
+    </p>
+  </section>
+
+  <!-- ===== CTA SPLIT ===== -->
+  <div id="cta-split" aria-label="Call to action">
+    <div class="split-inner">
+      <div class="split-img-wrap">
+        <picture>
+          <source srcset="assets/roofing-work-01.webp" type="image/webp" />
+          <img class="split-img" src="assets/roofing-work-01.jpg" alt="JJRR — Real craftsmanship" loading="lazy" width="700" height="560" />
+        </picture>
+      </div>
+      <div class="split-content reveal">
+        <div class="section-eyebrow" style="margin-bottom:16px;">
+          <span data-en>Why JJRR</span>
+          <span data-es>Por Qué JJRR</span>
+        </div>
+        <h2>
+          <span data-en>Your home deserves<br><em>thoughtful</em> work.</span>
+          <span data-es>Su hogar merece<br>trabajo <em>pensado</em>.</span>
+        </h2>
+        <p data-en>Whether it is seasonal maintenance, an interior upgrade, or a roof repair — JJRR brings the same standard: do it once, do it well. Across Kissimmee, Orlando, Davenport, Poinciana, Apopka, and more.</p>
+        <p data-es>Ya sea mantenimiento de temporada, una mejora interior o una reparación de techo — JJRR aporta el mismo estándar: hágalo una vez, hágalo bien. En Kissimmee, Orlando, Davenport, Poinciana, Apopka y más.</p>
+        <div class="split-points">
+          <span><i class="fas fa-handshake" aria-hidden="true"></i><span data-en>Honest estimates</span><span data-es>Estimados honestos</span></span>
+          <span><i class="fas fa-comments" aria-hidden="true"></i><span data-en>Bilingual</span><span data-es>Bilingüe</span></span>
+          <span><i class="fas fa-leaf" aria-hidden="true"></i><span data-en>Quality materials</span><span data-es>Materiales de calidad</span></span>
+        </div>
+        <div class="split-btns">
+          <a href="tel:4079220033" class="btn-gold"><i class="fas fa-phone" aria-hidden="true"></i> 407-922-0033</a>
+          <a href="https://wa.me/14079220033" target="_blank" rel="noopener" class="btn-ghost" style="border-color:rgba(37,211,102,0.6);color:#3ddf80;"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PORTFOLIO CAROUSEL ===== -->
+  <section id="portfolio" aria-label="Portfolio">
+    <div class="section-header reveal">
+      <div class="section-eyebrow">
+        <span data-en>Recent Projects</span>
+        <span data-es>Proyectos Recientes</span>
+      </div>
+      <h2 class="section-title">
+        <span data-en>A <em>portfolio</em> of homes.</span>
+        <span data-es>Un <em>portafolio</em> de hogares.</span>
+      </h2>
+    </div>
+
+    <div class="carousel-wrap reveal">
+      <div class="carousel-track" id="carouselTrack">
+        <div class="carousel-slide">
+          <picture>
+            <source srcset="assets/roofing-work-01.webp" type="image/webp" />
+            <img src="assets/roofing-work-01.jpg" alt="Roof maintenance Kissimmee" loading="lazy" width="700" height="340" />
+          </picture>
+          <div class="slide-overlay">
+            <h4 data-en>Roof Repair · Kissimmee</h4><h4 data-es>Reparación · Kissimmee</h4>
+            <span data-en>Shingle Replacement</span><span data-es>Reemplazo de Tejas</span>
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+          <picture>
+            <source srcset="assets/roofing-work-02.webp" type="image/webp" />
+            <img src="assets/roofing-work-02.jpg" alt="Home improvement Orlando" loading="lazy" width="700" height="340" />
+          </picture>
+          <div class="slide-overlay">
+            <h4 data-en>Roof Restoration · Orlando</h4><h4 data-es>Restauración · Orlando</h4>
+            <span data-en>Full Restoration</span><span data-es>Restauración Completa</span>
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+          <picture>
+            <source srcset="assets/roofing-work-03.webp" type="image/webp" />
+            <img src="assets/roofing-work-03.jpg" alt="Roof maintenance Davenport" loading="lazy" width="700" height="340" />
+          </picture>
+          <div class="slide-overlay">
+            <h4 data-en>Roof Work · Davenport</h4><h4 data-es>Trabajo · Davenport</h4>
+            <span data-en>Maintenance Program</span><span data-es>Programa de Mantenimiento</span>
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+          <img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=700&q=80" alt="Home improvement Poinciana" loading="lazy" width="700" height="340" />
+          <div class="slide-overlay">
+            <h4 data-en>Home Upgrade · Poinciana</h4><h4 data-es>Mejora · Poinciana</h4>
+            <span data-en>Drywall &amp; Paint</span><span data-es>Drywall y Pintura</span>
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+          <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=700&q=80" alt="Flat roof Apopka" loading="lazy" width="700" height="340" />
+          <div class="slide-overlay">
+            <h4 data-en>Flat Roof · Apopka</h4><h4 data-es>Techo Plano · Apopka</h4>
+            <span data-en>Waterproofing</span><span data-es>Impermeabilización</span>
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&q=80" alt="New roof St Cloud" loading="lazy" width="700" height="340" />
+          <div class="slide-overlay">
+            <h4 data-en>Full Roof · St. Cloud</h4><h4 data-es>Techo Completo · St. Cloud</h4>
+            <span data-en>New Installation</span><span data-es>Instalación Nueva</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-nav">
+      <button class="carousel-btn" onclick="moveCarousel(-1)" aria-label="Previous slide"><i class="fas fa-arrow-left"></i></button>
+      <div class="carousel-dots" id="carouselDots"></div>
+      <button class="carousel-btn" onclick="moveCarousel(1)" aria-label="Next slide"><i class="fas fa-arrow-right"></i></button>
+    </div>
+  </section>
+
+  <!-- ===== COVERAGE ===== -->
+  <section id="coverage" aria-label="Coverage area">
+    <div class="coverage-inner">
+      <div class="coverage-content reveal">
+        <div class="section-eyebrow">
+          <span data-en>Service Area</span>
+          <span data-es>Área de Servicio</span>
+        </div>
+        <h2 class="section-title">
+          <span data-en>Serving <em>Central Florida</em>.</span>
+          <span data-es>Sirviendo al <em>Centro de Florida</em>.</span>
+        </h2>
+
+        <p class="coverage-intro" data-en>
+          We serve homeowners across Central Florida with premium roofing and home improvement services. Our coverage spans these communities — plus surrounding areas throughout the region.
+        </p>
+        <p class="coverage-intro" data-es>
+          Servimos a propietarios en todo el Centro de Florida con servicios premium de techos y mejoras del hogar. Nuestra cobertura abarca estas comunidades — más áreas cercanas en toda la región.
+        </p>
+
+        <div class="city-grid">
+          <div class="city-card" tabindex="0"><i class="fas fa-map-pin" aria-hidden="true"></i> Kissimmee</div>
+          <div class="city-card" tabindex="0"><i class="fas fa-map-pin" aria-hidden="true"></i> Orlando</div>
+          <div class="city-card" tabindex="0"><i class="fas fa-map-pin" aria-hidden="true"></i> Davenport</div>
+          <div class="city-card" tabindex="0"><i class="fas fa-map-pin" aria-hidden="true"></i> Poinciana</div>
+          <div class="city-card" tabindex="0"><i class="fas fa-map-pin" aria-hidden="true"></i> Apopka</div>
+          <div class="city-card" tabindex="0"><i class="fas fa-map-pin" aria-hidden="true"></i> St. Cloud</div>
+          <div class="city-card secondary" tabindex="0"><i class="fas fa-map-pin" aria-hidden="true"></i> Celebration</div>
+          <div class="city-card secondary" tabindex="0"><i class="fas fa-map-pin" aria-hidden="true"></i> Lakeland</div>
+          <div class="city-card secondary" tabindex="0"><i class="fas fa-map-pin" aria-hidden="true"></i> Winter Garden</div>
+          <div class="city-card secondary" tabindex="0"><i class="fas fa-map-pin" aria-hidden="true"></i> Clermont</div>
+          <div class="city-card secondary" tabindex="0"><i class="fas fa-map-pin" aria-hidden="true"></i> Polk County</div>
+        </div>
+
+        <p class="coverage-note">
+          <i class="fas fa-info-circle" aria-hidden="true"></i>
+          <span data-en>Serving most areas across Florida · Contact us to confirm availability</span>
+          <span data-es>Sirviendo la mayor parte de Florida · Contáctenos para confirmar disponibilidad</span>
+        </p>
+      </div>
+
+      <div class="map-frame reveal" id="mapFrame">
+        <div class="map-loading" id="mapLoading">
+          <div class="map-loading-spinner"></div>
+          <span data-en>Loading map...</span>
+          <span data-es>Cargando mapa...</span>
+        </div>
+        <div id="jjrr-map" aria-label="Interactive service area map"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" aria-label="Contact">
+    <div class="section-header reveal" style="margin-bottom:60px;">
+      <div class="section-eyebrow">
+        <span data-en>Let's Talk</span>
+        <span data-es>Hablemos</span>
+      </div>
+      <h2 class="section-title">
+        <span data-en>Request your <em>estimate</em>.</span>
+        <span data-es>Solicite su <em>estimado</em>.</span>
+      </h2>
+    </div>
+
+    <div class="contact-inner">
+      <div class="contact-info reveal">
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true"><i class="fas fa-phone"></i></div>
+          <div>
+            <h4 data-en>Call</h4><h4 data-es>Llamar</h4>
+            <a href="tel:4079220033">407-922-0033</a>
+            <p class="contact-sub" data-en>Mon–Sat · 7 AM – 7 PM</p>
+            <p class="contact-sub" data-es>Lun–Sáb · 7 AM – 7 PM</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon green" aria-hidden="true"><i class="fab fa-whatsapp"></i></div>
+          <div>
+            <h4>WhatsApp</h4>
+            <a href="https://wa.me/14079220033" target="_blank" rel="noopener">407-922-0033</a>
+            <p class="contact-sub" data-en>Send a message · We reply fast</p>
+            <p class="contact-sub" data-es>Envíe un mensaje · Respondemos rápido</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true"><i class="fas fa-map-marker-alt"></i></div>
+          <div>
+            <h4 data-en>Based In</h4><h4 data-es>Sede</h4>
+            <p>Kissimmee, FL</p>
+            <p class="contact-sub">Kissimmee · Orlando · Davenport · Poinciana · Apopka · And More</p>
+          </div>
+        </div>
+
+        <div class="hours-card">
+          <h4 data-en>Hours</h4><h4 data-es>Horario</h4>
+          <p data-en>Mon – Sat: 7:00 AM – 7:00 PM</p>
+          <p data-es>Lun – Sáb: 7:00 AM – 7:00 PM</p>
+          <p class="muted" data-en>Storm repairs by call, anytime</p>
+          <p class="muted" data-es>Reparaciones por tormenta con cita, en cualquier momento</p>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer" aria-label="Footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="brand" style="cursor:default;">
+          <div class="brand-mark" aria-hidden="true"><span>JJRR</span></div>
+          <div class="brand-text">
+            <span class="brand-name"><span class="j" aria-hidden="true">J</span>JRR</span>
+            <span class="brand-sub">by Jorge Rivera</span>
+          </div>
+        </div>
+        <p data-en>Premium roofing and home services across Central Florida. Roof maintenance programs, home improvement, quality repairs — by Jorge Rivera.</p>
+        <p data-es>Servicios premium de techo y hogar en el Centro de Florida. Programas de mantenimiento, mejoras del hogar, reparaciones de calidad — por Jorge Rivera.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-en>Services</h4><h4 data-es>Servicios</h4>
+        <ul>
+          <li><a href="#services" data-en>Maintenance Programs</a><a href="#services" data-es>Programas de Mantenimiento</a></li>
+          <li><a href="#services" data-en>Home Improvement</a><a href="#services" data-es>Mejoras del Hogar</a></li>
+          <li><a href="#services" data-en>Leak Repair</a><a href="#services" data-es>Reparación de Goteras</a></li>
+          <li><a href="#services" data-en>Shingle Replacement</a><a href="#services" data-es>Reemplazo de Tejas</a></li>
+          <li><a href="#services" data-en>Drywall &amp; Paint</a><a href="#services" data-es>Drywall y Pintura</a></li>
+          <li><a href="#services" data-en>Storm Repair</a><a href="#services" data-es>Reparación por Tormenta</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-en>Contact</h4><h4 data-es>Contacto</h4>
+        <ul>
+          <li><a href="tel:4079220033"><i class="fas fa-phone" style="color:var(--gold);margin-right:8px;" aria-hidden="true"></i>407-922-0033</a></li>
+          <li><a href="https://wa.me/14079220033" target="_blank" rel="noopener"><i class="fab fa-whatsapp" style="color:var(--green);margin-right:8px;" aria-hidden="true"></i>WhatsApp</a></li>
+          <li><a href="#coverage"><i class="fas fa-map-marker-alt" style="color:var(--gold);margin-right:8px;" aria-hidden="true"></i>Kissimmee, FL</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-en>Cities</h4><h4 data-es>Ciudades</h4>
+        <ul>
+          <li class="plain">Kissimmee</li>
+          <li class="plain">Orlando</li>
+          <li class="plain">Davenport</li>
+          <li class="plain">Poinciana</li>
+          <li class="plain">Apopka</li>
+          <li class="plain" data-en>And More</li>
+          <li class="plain" data-es>Y Más</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p data-en>&copy; 2025 JJRR by Jorge Rivera. <span class="accent">Crafted in Central Florida.</span></p>
+      <p data-es>&copy; 2025 JJRR por Jorge Rivera. <span class="accent">Hecho en el Centro de Florida.</span></p>
+      <div class="social-links">
+        <a href="https://wa.me/14079220033" target="_blank" rel="noopener" class="social-link" title="WhatsApp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="tel:4079220033" class="social-link" title="Call" aria-label="Call"><i class="fas fa-phone"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== FLOATING ACTIONS ===== -->
+  <div class="float-actions">
+    <a href="tel:4079220033" class="float-call" aria-label="Call us">
+      <i class="fas fa-phone" aria-hidden="true"></i>
+      <span data-en>Call</span>
+      <span data-es>Llamar</span>
+    </a>
+    <a href="https://wa.me/14079220033" target="_blank" rel="noopener" class="float-wa" title="WhatsApp" aria-label="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
