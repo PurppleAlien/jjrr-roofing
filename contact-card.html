@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JJRR — Tarjeta de Contacto</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0a0a0a;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      padding: 20px;
+    }
+    .card {
+      max-width: 540px;
+      width: 100%;
+      background: #111;
+      border: 1px solid #c9a84c;
+      border-radius: 20px;
+      padding: 36px 32px 32px;
+      box-shadow: 0 0 40px rgba(201,168,76,.08), 0 0 0 1px rgba(201,168,76,.15);
+      position: relative;
+      overflow: hidden;
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #c9a84c, #e8d48b, #c9a84c);
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 28px;
+    }
+    .brand h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #c9a84c;
+      line-height: 1;
+    }
+    .brand small {
+      display: block;
+      font-size: 11px;
+      color: #888;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+    .badge {
+      background: #c9a84c;
+      color: #0a0a0a;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 4px 12px;
+      border-radius: 50px;
+    }
+    .qr-section {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      margin-bottom: 28px;
+    }
+    .qr-section img {
+      width: 140px;
+      height: 140px;
+      border-radius: 12px;
+      border: 2px solid #c9a84c;
+      flex-shrink: 0;
+    }
+    .qr-label p {
+      color: #ccc;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .qr-label .url {
+      color: #c9a84c;
+      font-weight: 600;
+      font-size: 14px;
+      word-break: break-all;
+      margin-top: 4px;
+    }
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #c9a84c44, transparent);
+      margin: 20px 0;
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .info-item h3 {
+      color: #888;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 3px;
+    }
+    .info-item p {
+      color: #eee;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .info-item a {
+      color: #c9a84c;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .info-item a:hover { text-decoration: underline; }
+    .full {
+      grid-column: 1 / -1;
+    }
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 4px;
+    }
+    .services span {
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      color: #c9a84c;
+      font-size: 11px;
+      padding: 3px 10px;
+      border-radius: 50px;
+    }
+    .footer-note {
+      text-align: center;
+      margin-top: 24px;
+      font-size: 11px;
+      color: #555;
+    }
+
+    @media print {
+      body { background: #fff; padding: 0; }
+      .card { box-shadow: none; border-color: #c9a84c; max-width: 100%; }
+      .badge { background: #c9a84c; color: #000; }
+      .services span { background: #f5f5f5; }
+    }
+    @media (max-width: 480px) {
+      .card { padding: 24px 20px; }
+      .qr-section { flex-direction: column; text-align: center; }
+      .qr-section img { width: 160px; height: 160px; }
+      .info-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="header">
+      <div class="brand">
+        <h1>JJRR</h1>
+        <small>by Jorge Rivera</small>
+      </div>
+      <span class="badge">Contáctanos</span>
+    </div>
+
+    <div class="qr-section">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://leafy-sprite-4343c8.netlify.app/" alt="QR Code JJRR" crossorigin>
+      <div class="qr-label">
+        <p>Escanea para ver nuestro sitio web</p>
+        <p class="url">leafy-sprite‑4343c8.netlify.app</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="info-grid">
+      <div class="info-item">
+        <h3>Teléfono</h3>
+        <p><a href="tel:+14079220033">407-922-0033</a></p>
+      </div>
+      <div class="info-item">
+        <h3>WhatsApp</h3>
+        <p><a href="https://wa.me/14079220033">407-922-0033</a></p>
+      </div>
+      <div class="info-item">
+        <h3>Ubicación</h3>
+        <p>Kissimmee, FL</p>
+      </div>
+      <div class="info-item">
+        <h3>Horario</h3>
+        <p>Lun–Sáb · 7 AM – 7 PM</p>
+      </div>
+      <div class="info-item full">
+        <h3>Servicios</h3>
+        <div class="services">
+          <span>Mantenimiento de Techo</span>
+          <span>Mejoras del Hogar</span>
+          <span>Reparación de Goteras</span>
+          <span>Reemplazo de Tejas</span>
+          <span>Techos Planos</span>
+          <span>Drywall y Pintura</span>
+          <span>Carpintería</span>
+          <span>Reparación por Tormenta</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-note">
+      Roofing &amp; Home Services · Central Florida
+    </div>
+  </div>
+</body>
+</html>
